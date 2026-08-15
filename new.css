@@ -1,0 +1,757 @@
+/*
+One Dark Self NEXT
+https://github.com/ivyhole/trilium-theme-one-dark
+trilium-NEXT:>=0.104.x
+*/
+
+@font-face {
+    font-family: 'MononokiNerdFontMono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../custom/fonts/MononokiNerdFontMono.woff2');
+}
+
+@font-face {
+    font-family: 'LXGWWenKaiGBR';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../../custom/fonts/LXGWWenKaiGB-R.woff2');
+}
+
+:root{
+    --theme-style: dark;
+
+    /*  自定义颜色 */
+    --common-color-white:#f5f3f4;
+    --common-color-whitea:#f5f3f411;
+    --common-color-whitea2:#f5f3f415;
+    --common-color-black:#282c34;
+    --common-color-red:#e06c75;
+    --common-color-reda:#e06c7544;
+    --common-color-green:#98c379;
+    --common-color-greena:#98c37944;
+    --common-color-green2:#7bc379;
+    --common-color-yellow:#e5c07b;
+    --common-color-yellowa:#e5c07b44;
+    --common-color-orange:#d19a66;
+    --common-color-blue:#61afef;
+    --common-color-bluea:#61afef44;
+    --common-color-violet:#c678dd;
+    --common-color-violeta:#c678dd44;
+    --common-color-cyan:#56b6c2;
+    --common-color-gery:#abb2bf;
+    --common-color-gery2: #86919f;
+    --common-color-gery3: #424958;
+    --common-color-gery3a: #42495844;
+    --common-color-mauve: #c6a0f6;
+    --common-color-flamingo: #f0c6c6;
+    --common-color-surface0: #363a4f;
+    --common-color-lavender: #b7bdf8;
+
+    --common-color-blockquote-dark: #282c34aa;
+
+    /* font */
+    /* 主体字体 */
+    --main-font-family: 'LXGWWenKaiGBR' !important;
+    --main-font-size: normal !important;
+    /* 笔记树字体 */
+    --tree-font-family: 'LXGWWenKaiGBR' !important;
+    --tree-font-size: normal !important;
+    /* 笔记详情字体 */
+    --detail-font-family: 'LXGWWenKaiGBR' !important;
+    --detail-font-size: normal !important;
+    /* 等宽文字字体(代码) */
+    --monospace-font-family: 'MononokiNerdFontMono' !important;
+    --monospace-font-size: normal !important;
+
+    /* 基础背景颜色配置 */
+    --window-background-color-bgfx: #21252baa !important;
+    --window-background-color: #21252baa !important;
+
+    --root-background: #21252baa !important;
+    --left-pane-background-color: var(--root-background) !important;
+
+    --main-background-color: #282c34aa !important;
+    --main-text-color: #c1c7d1 !important;
+    --main-border-color: #c1c7d1 !important;
+
+    /* 导航栏配置 */
+    /* 垂直 */
+    --launcher-pane-vert-background-color-bgfx: #21252baa !important;
+    --launcher-pane-vert-background-color: #21252baa !important;
+    --launcher-pane-vert-text-color: #86919f !important;
+    --launcher-pane-vert-button-hover-color:#c1c7d1 !important;
+    --launcher-pane-vert-button-hover-background: #21252b11 !important;
+
+    /* 水平 */
+    --launcher-pane-horiz-background-color-bgfx: #21252baa !important;
+    --launcher-pane-horiz-background-color: #21252baa !important;
+    --launcher-pane-horiz-text-color: #86919ff0 !important;
+    --launcher-pane-horiz-button-hover-color:#c1c7d1 !important;
+    --launcher-pane-horiz-button-hover-background: #21252b11 !important;
+
+
+    /* 树形区域 */
+    --left-pane-text-color: #86919f !important;
+    --left-pane-item-action-button-color: #21252b !important;
+
+    /* 主显示区域-工具栏 */
+    --classic-toolbar-vert-layout-background-color: #282c34dd !important;
+    --classic-toolbar-vert-layout-background-color-bgfx: #282c34dd !important;
+
+    /* 主显示区域-属性栏 */
+    --bottom-panel-background-color: #282c34dd !important;
+    --bottom-panel-title-bar-background-color: #21252baa !important;
+    --status-bar-border-color: #21252b80 !important;
+    /* 右侧面板 */
+    --right-pane-peek-background: #21252baa !important;
+
+    /* 选项卡颜色 */
+    --card-background-color:#21252b0c !important;
+
+    /* modal */
+    --modal-background-color: #21252bee !important;
+    --modal-title-color: #86919f  !important;
+    --modal-close-button-hover-background: #e06c75 !important;
+    --modal-border-color: #c1c7d1 !important;
+    --button-group-active-button-background-color:#21252b !important;
+
+}
+
+/* rainbow tree */
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)   { color: var(--common-color-red)    !important; }
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) { color: var(--common-color-yellow)  !important; }
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) { color: var(--common-color-green)   !important; }
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) { color: var(--common-color-cyan)    !important; }
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) { color: var(--common-color-blue)    !important; }
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) { color: var(--common-color-violet)  !important; }
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n):hover   { color: var(--common-color-red)    !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1):hover { color: var(--common-color-yellow)  !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2):hover { color: var(--common-color-green)   !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3):hover { color: var(--common-color-cyan)    !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4):hover { color: var(--common-color-blue)    !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5):hover { color: var(--common-color-violet)  !important; }
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)   > span.fancytree-node:hover { color: var(--common-color-red)    !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) > span.fancytree-node:hover { color: var(--common-color-yellow)  !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) > span.fancytree-node:hover { color: var(--common-color-green)   !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) > span.fancytree-node:hover { color: var(--common-color-cyan)    !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) > span.fancytree-node:hover { color: var(--common-color-blue)    !important; }
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) > span.fancytree-node:hover { color: var(--common-color-violet)  !important; }
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)   > span.fancytree-node.fancytree-active { color: var(--common-color-red)    !important; }
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) > span.fancytree-node.fancytree-active { color: var(--common-color-yellow)  !important; }
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) > span.fancytree-node.fancytree-active { color: var(--common-color-green)   !important; }
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) > span.fancytree-node.fancytree-active { color: var(--common-color-cyan)    !important; }
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) > span.fancytree-node.fancytree-active { color: var(--common-color-blue)    !important; }
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) > span.fancytree-node.fancytree-active { color: var(--common-color-violet)  !important; }
+
+/* h23456 */
+.ck-content h2 {
+    color: var(--common-color-red);
+    border-bottom: 2px solid var(--common-color-gery);
+}
+.ck-content h2::before {
+    content: 'H2';
+    color: var(--common-color-gery);
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    font-size: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ck-content h3 {
+    color: var(--common-color-yellow);
+    border: none;
+}
+.ck-content h3::before {
+    content: 'H3';
+    color: var(--common-color-gery);
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    font-size: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ck-content h4 {
+    color: var(--common-color-green);
+    border: none;
+}
+.ck-content h4::before {
+    content: 'H4';
+    color: var(--common-color-gery);
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    font-size: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ck-content h5 {
+    color: var(--common-color-blue);
+    border: none;
+}
+.ck-content h5::before {
+    content: 'H5';
+    color: var(--common-color-gery);
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    font-size: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ck-content h6 {
+    color: var(--common-color-violet);
+    border: none;
+}
+.ck-content h6::before {
+    content: 'H6';
+    color: var(--common-color-gery);
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    font-size: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.15rem !important;
+}
+
+/* toc */
+div.toc-widget span.toc > ol > li               { color: var(--common-color-red); }
+div.toc-widget span.toc > ol > ol > li          { color: var(--common-color-yellow); }
+div.toc-widget span.toc > ol > ol > ol > li     { color: var(--common-color-green); }
+div.toc-widget span.toc > ol > ol > ol > ol > li     { color: var(--common-color-blue); }
+div.toc-widget span.toc > ol > ol > ol > ol > ol > li { color: var(--common-color-violet); }
+
+div#toast-container {
+    right: 10px !important;
+    bottom: 10px !important;
+    top: auto !important;
+    width: auto !important;
+}
+
+/* mermaid */
+.ck-mermaid__editing-view {
+    background: var(--main-background-color) !important;
+}
+
+/* todolist */
+.todo-list .todo-list__label>span[contenteditable=false]>input:before{
+    border: 1px solid var(--main-text-color) !important;
+    background: var(--main-background-color) !important;
+}
+
+.todo-list .todo-list__label>span[contenteditable=false]>input[checked]:before {
+    background: var(--common-color-blue) !important;
+    border-color: var(--common-color-blue) !important;
+}
+
+.todo-list .todo-list__label>span[contenteditable=false]>input[checked]:after{
+    border-color:var(--main-background-color) !important;
+}
+
+/* 高亮 */
+.ck-content p > u {
+    text-decoration-color: var(--common-color-blue);
+    text-underline-offset: 0.1rem;
+}
+
+.ck-content p > del {
+    color: var(--common-color-gery2);
+}
+
+/* 以下为修改引用块,无须->删除*/
+/* blockquote 只针对文本文章中的格式 */
+.ck-content blockquote {
+    border: 1px solid var(--common-color-gery2) !important;
+    font-style: normal  !important;
+    border-radius: 0.5em  !important;
+    margin: 0.5em 0  !important;
+    position: relative  !important;
+    padding: 0  !important;
+    padding-left: 0  !important;
+    padding-right: 0  !important;
+    overflow: hidden  !important;
+}
+/* 隐藏 quote marks */
+/* .ck-content blockquote::before,
+.ck-content blockquote::after {
+    display: none !important; 
+} */
+.ck-content blockquote > p {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+    background: var(--common-color-blockquote-dark);
+}
+.ck-content blockquote > p:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0.5em !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+    
+}
+.ck-content blockquote > p:nth-child(2) {
+    padding-top: 0.5em !important;
+}
+.ck-content blockquote > ul {
+    padding-top: 0.5em !important;
+}
+.ck-content blockquote > p:first-child:not(:last-child) {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-weight: 600 !important;
+    color: var(--common-color-gery3) !important;
+    background: var(--common-color-blockquote-dark) !important;
+    border-bottom: 1px dashed var(--common-color-gery3) !important;
+    padding: 0.5em !important;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    font-size: 1em !important;
+    margin: 0 !important;
+}
+.ck-content blockquote > p:first-child:last-child {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-weight: 600 !important;
+    color: var(--common-color-gery3) !important;
+    background: var(--common-color-blockquote-dark) !important;
+    font-size: 1em !important;
+    padding: 0.5em !important;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    padding-bottom: 0.5em !important;
+    margin: 0 !important;
+}
+
+/* admonition */
+
+
+.admonition{
+    background: unset  !important;
+}
+
+.admonition.note::before {
+    all: unset !important;
+}
+
+.admonition.note {
+    --accent-color: var(--common-color-blue) !important;
+    margin: 0.5em 0  !important;
+    padding:0 !important;
+}
+
+.admonition.note>p{
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+
+.admonition.note>p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.5em !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+.admonition.note>p:nth-child(2){
+    padding-top: 0.5em !important;
+}
+
+.admonition.note>ul{
+    padding-top: 0.5em !important;
+}
+
+.admonition.note>p:first-child:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-blue);
+    background: var(--common-color-bluea);
+    border-bottom: 1px dashed var(--common-color-blue);
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    font-size: 1em;
+    margin: 0;
+}
+
+.admonition.note>p:first-child:last-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-blue);
+    background: var(--common-color-bluea);
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-bottom: 0.5em !important;
+    padding-right: 2.25em !important;
+    margin: 0;
+}
+
+
+.admonition.note>p:first-child::before{
+    content: '🛈';
+    font-family: boxicons !important;
+    position: absolute;
+    font-weight: 500;
+    left: 1em;
+    font-size: 1em;
+}
+
+
+.admonition.tip::before {
+    all: unset !important;
+}
+
+.admonition.tip {
+    --accent-color: var(--common-color-green) !important;
+    margin: 0.5em 0  !important;
+    padding:0 !important;
+}
+
+.admonition.tip>p{
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+
+.admonition.tip>p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.5em !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+.admonition.tip>p:nth-child(2){
+    padding-top: 0.5em !important;
+}
+
+.admonition.tip>ul{
+    padding-top: 0.5em !important;
+}
+
+.admonition.tip>p:first-child:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-green);
+    background: var(--common-color-greena);
+    border-bottom: 1px dashed var(--common-color-green);
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    font-size: 1em;
+    margin: 0;
+}
+
+.admonition.tip>p:first-child:last-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-green);
+    background: var(--common-color-greena);
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    padding-bottom: 0.5em !important;
+    margin: 0;
+}
+
+
+.admonition.tip>p:first-child::before{
+    content: '✔';
+    font-family: boxicons !important;
+    position: absolute;
+    font-weight: 500;
+    left: 1em;
+    font-size: 1em;
+}
+
+
+.admonition.important::before {
+    all: unset !important;
+}
+
+.admonition.important {
+    --accent-color: var(--common-color-violet) !important;
+    margin: 0.5em 0  !important;
+    padding:0 !important;
+}
+
+.admonition.important>p{
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+
+.admonition.important>p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.5em !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+.admonition.important>p:nth-child(2){
+    padding-top: 0.5em !important;
+}
+
+.admonition.important>ul{
+    padding-top: 0.5em !important;
+}
+
+.admonition.important>p:first-child:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-violet);
+    background: var(--common-color-violeta);
+    border-bottom: 1px dashed var(--common-color-violet);
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    font-size: 1em;
+    margin: 0;
+}
+
+.admonition.important>p:first-child:last-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-violet);
+    background: var(--common-color-violeta);
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-bottom: 0.5em !important;
+    padding-right: 2.25em !important;
+    margin: 0;
+}
+
+
+.admonition.important>p:first-child::before{
+    content: '★';
+    font-family: boxicons !important;
+    position: absolute;
+    font-weight: 500;
+    left: 1em;
+    font-size: 1em;
+}
+
+.admonition.caution::before {
+    all: unset !important;
+}
+
+.admonition.caution {
+    --accent-color: var(--common-color-red) !important;
+    margin: 0.5em 0  !important;
+    padding:0 !important;
+}
+
+.admonition.caution>p{
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+
+.admonition.caution>p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.5em !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+.admonition.caution>p:nth-child(2){
+    padding-top: 0.5em !important;
+}
+.admonition.caution>ul{
+    padding-top: 0.5em !important;
+}
+
+.admonition.caution>p:first-child:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-red);
+    background: var(--common-color-reda);
+    border-bottom: 1px dashed var(--common-color-red);
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    font-size: 1em;
+    margin: 0;
+}
+
+.admonition.caution>p:first-child:last-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-red);
+    background: var(--common-color-reda);
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-bottom: 0.5em !important;
+    padding-right: 2.25em !important;
+    margin: 0;
+}
+
+
+.admonition.caution>p:first-child::before{
+    content: '🗲';
+    font-family: boxicons !important;
+    position: absolute;
+    font-weight: 500;
+    left: 1em;
+    font-size: 1em;
+}
+
+
+.admonition.warning::before {
+    all: unset !important;
+}
+
+.admonition.warning {
+    --accent-color: var(--common-color-yellow) !important;
+    margin: 0.5em 0  !important;
+    padding:0 !important;
+}
+
+.admonition.warning>p{
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+
+.admonition.warning>p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0.5em !important;
+    padding-left: 1.25em !important;
+    padding-right: 1.25em !important;
+}
+.admonition.warning>p:nth-child(2){
+    padding-top: 0.5em !important;
+}
+.admonition.warning>ul{
+    padding-top: 0.5em !important;
+}
+
+.admonition.warning>p:first-child:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-yellow);
+    background: var(--common-color-yellowa);
+    border-bottom: 1px dashed var(--common-color-yellow);
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-right: 2.25em !important;
+    font-size: 1em;
+    margin: 0;
+}
+
+.admonition.warning>p:first-child:last-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--common-color-yellow);
+    background: var(--common-color-yellowa);
+    font-size: 1em;
+    padding: 0.5em;
+    padding-left: 2.25em !important;
+    padding-bottom: 0.5em !important;
+    padding-right: 2.25em !important;
+    margin: 0;
+}
+
+
+.admonition.warning>p:first-child::before{
+    content: '⚠';
+    font-family: boxicons !important;
+    position: absolute;
+    font-weight: 500;
+    left: 1em;
+    font-size: 1em;
+}
+
+/* 表格 */
+.ck-content .table>figcaption{
+    background-color: var(--main-background-color) !important;
+    color: var(--main-text-color) !important;
+    border: 1px solid var(--main-border-color);
+    border-bottom: none !important;
+}
+
+
+/* excalidraw */
+.excalidraw.theme--dark {
+    --theme-filter: none !important;
+}
+
+/* 其他配置 */
+/* .ck-content *:not(pre) > code {
+    background-color: var(--common-color-whitea2);
+    font-family: var(--monospace-font-family) !important;
+    font-style: italic;
+    margin: 0;
+}
+
+.ck-content *:not(pre) > code#ck-code_selected {
+    background-color: var(--common-color-blockquote-dark);
+} */
+
+.bottom-panel-content{
+    border-bottom: unset !important;
+}
+
+.classic-toolbar-widget{
+    border-end-end-radius:var(--note-split-top-border-radius);
+    border-end-start-radius:var(--note-split-top-border-radius);
+    border-start-end-radius:var(--note-split-top-border-radius);
+    margin-right: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.options-page-header{
+    background: #21252bee !important;
+}
+
+.component.scrolling-container > .component.note-detail > .note-detail-content-widget.note-detail-printable.visible > .note-detail-content-widget-content.options > .options-page-header{
+    background: #282c3401 !important;
+}
+
+.file-drop-zone{
+    background: unset !important;
+}
+.selectable-card.selected{
+    background: unset !important;
+    box-shadow: unset !important;
+}
